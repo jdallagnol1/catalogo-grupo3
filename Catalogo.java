@@ -16,25 +16,34 @@ public class Catalogo {
         catalog.add(new Veiculo("Jeep", 65000));
     }
 
-    public boolean newSale(Veiculo v){
-        try{
-            catalog.remove(v);
-        } catch (Exception e){
+    public boolean newSale(String model){
+        Veiculo aux = getByModel(model);
+        if (aux!=null){
+            catalog.remove(getByModel(model));
+            System.out.println(model + " vendido com sucesso!");
+            return true;
+        }
+        else{
+            System.out.println("Falha ao remover veiculo do catálogo!");
             return false;
         }
-        System.out.println("Falha ao remover veiculo do catálogo");
-        return true;
-
     }
 
     public boolean newPurchase(Veiculo v){
-        try{
-            catalog.add(v);
-        } catch (Exception e){
-            return false;
-        }
-        System.out.println("Falha ao adicionar novo veiculo ao catálogo");
+        catalog.add(v);
+        System.out.println(v.getModel() + " adicionado ao catálogo!");
         return true;
+    }
+        
+
+    public Veiculo getByModel(String model){
+        for (Veiculo v:catalog){
+            if(v.getModel().equalsIgnoreCase(model)){
+                return v;
+            }
+        }
+        System.out.println("Modelo não encontrado!");
+        return null;
     }
 
     public void listCatalog(){
