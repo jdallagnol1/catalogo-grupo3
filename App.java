@@ -1,5 +1,7 @@
 public class App {
     public static void main(String args[]){
-        Terminal t = new Terminal();
+        Catalogo c = new Catalogo();
+        c.listCatalog();
+        //Terminal t = new Terminal();
     }
 }
