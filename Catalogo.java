@@ -6,14 +6,14 @@ public class Catalogo {
     public Catalogo(){ //constructor + init
         catalog = new ArrayList<>();
         //hard code initialization
-        catalog.add(new Veiculo("Celta", 25000));
-        catalog.add(new Veiculo("Gol", 20000));
-        catalog.add(new Veiculo("Civic", 40000, 20000));
-        catalog.add(new Veiculo("Cruze", 35000));
-        catalog.add(new Veiculo("Golf", 30000));
-        catalog.add(new Veiculo("Ka", 15000, 12000));
-        catalog.add(new Veiculo("EcoSport", 50000));
-        catalog.add(new Veiculo("Jeep", 65000));
+        catalog.add(new Veiculo("Celta", 25000, "Preto"));
+        catalog.add(new Veiculo("Gol", 20000, "Branco"));
+        catalog.add(new Veiculo("Civic", 40000, 20000, "Prata"));
+        catalog.add(new Veiculo("Cruze", 35000, "Vermelho"));
+        catalog.add(new Veiculo("Golf", 30000, "Prata"));
+        catalog.add(new Veiculo("Ka", 15000, 12000, "Branco"));
+        catalog.add(new Veiculo("EcoSport", 50000, "Azul"));
+        catalog.add(new Veiculo("Jeep", 65000, "Preto"));
     }
 
     public boolean newSale(String model){
